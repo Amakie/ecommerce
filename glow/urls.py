@@ -4,5 +4,5 @@ from glow.views import index
 app_name = "glow"
 
 urlpatterns = [
-    path("", index)
+    path("", index, name="index")
 ]

@@ -32,13 +32,16 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    "jazzmin",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    "glow"
+    "glow",
+    "userauths",
+
 ]
 
 MIDDLEWARE = [
@@ -131,3 +134,15 @@ MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+
+
+JAZZMIN_SETTINGS = {
+    'site_header': "Organic Beauty Glow",
+    'site_brand': "Beauty needs",
+    'site_logo': "static/assets/imgs/theme/logo.svg",
+    'site_copyright': "Glow-shop"
+}
+
+
+AUTH_USER_MODEL = "userauths.User"
